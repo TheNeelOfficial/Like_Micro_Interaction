@@ -1,0 +1,97 @@
+body {
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+  font-family: 'Roboto', sans-serif;
+  background: #6EC2FA;
+  color: white;
+  text-align: center;
+   .nb-footer {
+     position: fixed;
+     display: block;
+     right: 20px;
+     bottom: 0;
+     width: 100%;
+     .social{
+       float: left;
+       margin-left: 2em;
+      .dribbble {
+       display: inline-block;
+       height: 28px;
+       padding: 0.5em;
+       img{
+         height: 100%;
+       }
+     }
+     .behance {
+       display: inline-block;
+       height: 28px;
+       padding: 0.5em;
+       img{
+         height: 100%;
+       }
+     }
+     }
+     .sign{
+       float: right;
+       font-size: 16px;
+       font-weight: 100;
+       letter-spacing: 0.1em;
+       a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 900;
+       }
+     }
+   }
+  .nb-container{
+    .nb-like{
+      #like-active{
+      height: 0%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 99;
+      #like{
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .like-animation{
+      animation: liked 0.5s;
+      height: 5% !important;
+    }
+    @keyframes liked {
+        0%   {height:0%}
+        50%  {height:8%}
+        100% {height:5%}
+      }
+    #like-inactive{
+      height: 5%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      #like{
+        height: 100%;
+        width: 100%;
+      }
+    }
+      #nb-blink{
+        height: 0%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+      }
+      .blink-animation{
+        animation: blink 0.8s !important;
+      }
+      @keyframes blink {
+        0%   {height:0%}
+        50%  {height:20%}
+        100% {height:0%}
+      }
+    }
+  }
+}
